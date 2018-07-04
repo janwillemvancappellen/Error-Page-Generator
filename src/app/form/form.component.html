@@ -8,6 +8,13 @@
     </label>
   </div>
   <div>
+    <label>Page language:
+      <select>
+        <option *ngFor="let language of languages">{{ language.name | uppercase }}</option>
+      </select>
+    </label>
+  </div>
+  <div>
     <label>Page color:
       <select>
         <option *ngFor="let color of colors">{{ color.name }}</option>

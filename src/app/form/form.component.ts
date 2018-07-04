@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TYPES } from '../types';
 import { COLORS } from '../colors';
-import { Language } from '../language';
+import { LANGUAGES } from '../languages';
 
 @Component({
   selector: 'app-form',
@@ -11,10 +11,7 @@ import { Language } from '../language';
 export class FormComponent {
   types = TYPES;
   colors = COLORS;
-  language: Language = {
-    id: 1,
-    name: 'nl',
-  };
+  languages = LANGUAGES;
 
   constructor() {
     console.log(this.types);
