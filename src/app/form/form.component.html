@@ -1,3 +1,24 @@
-<p>
-  form works!
-</p>
+<div>
+  <h2>Template settings</h2>
+  <div>
+    <label>Page type:
+      <select>
+        <option *ngFor="let type of types">{{ type.name }}</option>
+      </select>
+    </label>
+  </div>
+  <div>
+    <label>Page color:
+      <select>
+        <option *ngFor="let color of colors">{{ color.name }}</option>
+      </select>
+    </label>
+  </div>
+  <div>
+    <label>Page color:
+      <select>
+        <option *ngFor="let color of colors">{{ color.name }}</option>
+      </select>
+    </label>
+  </div>
+</div>

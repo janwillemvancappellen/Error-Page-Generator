@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./left-pane.component.scss']
 })
 export class LeftPaneComponent implements OnInit {
+  title = 'Error Page Generator';
 
   constructor() { }
 

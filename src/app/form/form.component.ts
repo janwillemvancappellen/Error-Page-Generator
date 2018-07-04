@@ -1,27 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { Type } from '../type';
-import { Color } from '../color';
+import { Component } from '@angular/core';
+import { TYPES } from '../types';
+import { COLORS } from '../colors';
+import { Language } from '../language';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
-  type: Type = {
+export class FormComponent {
+  types = TYPES;
+  colors = COLORS;
+  language: Language = {
     id: 1,
-    name: '404'
-  };
-  color: Color = {
-    id: 1,
-    name: 'red',
-    color: '#ff0000'
+    name: 'nl',
   };
 
   constructor() {
+    console.log(this.types);
   }
-
-  ngOnInit() {
-  }
-
 }
