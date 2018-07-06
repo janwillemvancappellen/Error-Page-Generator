@@ -12,8 +12,8 @@ export class FormComponent {
   types = TYPES;
   colors = COLORS;
   languages = LANGUAGES;
+  name: '';
 
   constructor() {
-    console.log(this.types);
   }
 }

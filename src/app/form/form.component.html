@@ -22,10 +22,8 @@
     </label>
   </div>
   <div>
-    <label>Page color:
-      <select>
-        <option *ngFor="let color of colors">{{ color.name }}</option>
-      </select>
+    <label>Page name:
+      <input type="text" [(ngModel)]="name" placeholder="Enter page name" />
     </label>
   </div>
 </div>
