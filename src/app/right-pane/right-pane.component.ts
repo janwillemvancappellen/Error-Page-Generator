@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './right-pane.component.html',
   styleUrls: ['./right-pane.component.scss']
 })
-export class RightPaneComponent implements OnInit {
+export class RightPaneComponent {
+  previewPage: any;
 
-  constructor() { }
+  constructor() {
+    this.loadPage();
+  }
 
-  ngOnInit() {
+  loadPage() {
+    console.log('load html page');
+    this.previewPage = '<object type="text/html" data="http://www.nos.nl"></object>';
   }
 
 }

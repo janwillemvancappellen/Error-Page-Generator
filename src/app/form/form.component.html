@@ -1,29 +1,25 @@
-<div>
+<div class="settings-form">
   <h2>Template settings</h2>
-  <div>
-    <label>Page type:
-      <select>
-        <option *ngFor="let type of types">{{ type.name }}</option>
-      </select>
-    </label>
+  <div class="setting">
+    <label>Page type:</label>
+    <select>
+      <option *ngFor="let type of types" (click)="onSelect($event, type)" class="page-type">{{ type.name }}</option>
+    </select>
   </div>
-  <div>
-    <label>Page language:
-      <select>
-        <option *ngFor="let language of languages">{{ language.name | uppercase }}</option>
-      </select>
-    </label>
+  <div class="setting">
+    <label>Page language:</label>
+    <select>
+      <option *ngFor="let language of languages" (click)="onSelect($event, language)" class="page-language">{{ language.name | uppercase }}</option>
+    </select>
   </div>
-  <div>
-    <label>Page color:
-      <select>
-        <option *ngFor="let color of colors">{{ color.name }}</option>
-      </select>
-    </label>
+  <div class="setting">
+    <label>Page color:</label>
+    <select>
+      <option *ngFor="let color of colors" class="page-color" (click)="onSelect($event, color)">{{ color.name }}</option>
+    </select>
   </div>
-  <div>
-    <label>Page name:
-      <input type="text" [(ngModel)]="name" placeholder="Enter page name" />
-    </label>
+  <div class="setting">
+    <label>Page name:</label>
+    <input type="text" [(ngModel)]="name" placeholder="Enter page name"/>
   </div>
 </div>

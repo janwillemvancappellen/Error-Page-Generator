@@ -1,0 +1,19 @@
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #1dd1a1;
+    h2 {
+        font-size: 1.4em;
+    }
+    .setting {
+        display: flex;
+        line-height: 2em;
+        label {
+            flex: 0 0 50%;
+        }
+        select, input {
+            flex: 1 100%;
+            min-width: 0;
+        }
+    }
+}
