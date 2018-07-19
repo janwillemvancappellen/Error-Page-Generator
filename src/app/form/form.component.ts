@@ -1,18 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Type } from '../type';
 import { TYPES } from '../types';
 import { COLORS } from '../colors';
 import { LANGUAGES } from '../languages';
 import { Language } from '../language';
 import { Color } from '../color';
+import { Page } from '../page';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent {
-  name: '';
+export class FormComponent implements OnInit {
+  name: string;
   types = TYPES;
   colors = COLORS;
   languages = LANGUAGES;
@@ -20,13 +21,15 @@ export class FormComponent {
   selectedLanguage: Language;
   selectedColor: Color;
   option: HTMLCollectionOf<Element>;
+  generateButtonText = 'Generate';
 
-  constructor() {
-  }
+  constructor() {}
 
-  onSelectType(type: Type): void {
-    this.selectedType = type;
-    console.log(this.selectedType.name);
+  ngOnInit() {
+    this.selectedType = this.types[0];
+    this.selectedLanguage = this.languages[0];
+    this.selectedColor = this.colors[0];
+    this.name = 'Site naam';
   }
 
   onSelect(event, type) {
@@ -42,5 +45,11 @@ export class FormComponent {
       this.selectedColor = type;
       console.log(this.selectedColor);
     }
+  }
+
+  generatePage() {
+    const page = new Page(this.name, this.selectedType, this.selectedLanguage, this.selectedColor);
+    console.log(page);
+    return page;
   }
 }

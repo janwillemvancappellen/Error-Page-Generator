@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-right-pane',
@@ -6,15 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./right-pane.component.scss']
 })
 export class RightPaneComponent {
-  previewPage: any;
+  name: string;
 
   constructor() {
-    this.loadPage();
-  }
 
-  loadPage() {
-    console.log('load html page');
-    this.previewPage = '<object type="text/html" data="http://www.nos.nl"></object>';
   }
-
 }

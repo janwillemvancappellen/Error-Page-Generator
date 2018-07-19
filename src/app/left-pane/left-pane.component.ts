@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-left-pane',
@@ -6,12 +6,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./left-pane.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class LeftPaneComponent implements OnInit {
+export class LeftPaneComponent {
   title = 'Error Page Generator';
 
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

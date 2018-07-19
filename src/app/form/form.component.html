@@ -20,6 +20,7 @@
   </div>
   <div class="setting">
     <label>Page name:</label>
-    <input type="text" [(ngModel)]="name" placeholder="Enter page name"/>
+    <input type="text" [(ngModel)]="name" placeholder="Enter page name" value="name"/>
   </div>
+  <button type="button" (click)="generatePage()">{{ generateButtonText | uppercase }}</button>
 </div>
