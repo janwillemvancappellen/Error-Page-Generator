@@ -9,6 +9,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class LeftPaneComponent {
   title = 'Error Page Generator';
 
-  constructor() { }
+  constructor() {
+
+  }
 
 }

@@ -14,5 +14,4 @@ export class Page {
         this.language = language;
         this.color = color;
     }
-
 }
