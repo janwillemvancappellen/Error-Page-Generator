@@ -1,5 +1,9 @@
 app-right-pane {
     background-color: #ecf0f1;
+    font-family: "RO Sans", Calibri, sans-serif;
+    font-weight: normal;
+    font-size: 1.125rem;
+    line-height: 1.625;
     .template {
         position: relative;
         display: flex;
@@ -11,10 +15,9 @@ app-right-pane {
             padding: 10px;
             background-color: #bdc3c7;
             border-radius: 1em;
-            background: linear-gradient(#dfe6e9, #ecf0f1);
+            background: linear-gradient(#dfe6e9, #ecf0f1 45%);
             .top {
                 display: flex;
-                // background-color: #bdc3c7;
                 width: 100%;
                 justify-content: space-between;
                 .tab {
@@ -34,33 +37,72 @@ app-right-pane {
                     margin-top: 10px;
                     margin-right: 10px;
                     border-radius: 1em;
-                    
                 }
             }
-            .page{
+            .page {
                 background-color: #ffffff;
                 border-bottom: 2px solid;
                 border-top-right-radius: 0.75em;
                 border-color:#dfe6e9;
-                padding: 10px;
+                padding: 0 0px 0px 0;
                 .head {
                     .logo {
                         max-height: 125px;
+                        height: 125px;
+                        img {
+                            position: absolute;
+                            left: 50%;
+                            margin-left: -22px;
+                        }
                     }
                     .nav {
-                       height: 3em;
-                       background-color: blue; 
+                        background-color: #01689b;
+                        padding: 0.75em;
+                        font-size: 1.2em;
                     }
                 }
+                .content {
+                    width: 75%;
+                    margin: 0 auto;
+                    padding: 30px 0;
+                    .page-title {
+                        font-size: 1.5em;
+                        padding-bottom: 0.5em;
+                    }
+                    .line {
+                        border: 0 none;
+                        border-bottom: 1px solid;
+                    }
+                    .text {
+                        ul {
+                            margin: 0;
+                            border: 0;
+                            padding: 0;
+                            list-style: none;
+                            li {
+                                a {
+                                    clear: left;
+                                    color: #01689b;
+                                    background-repeat: no-repeat;
+                                    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAMCAYAAACwXJejAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkU3QTdENTgxRDNFQzExRTY5MzhBODlBRTMxOTE5OTc3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkU3QTdENTgyRDNFQzExRTY5MzhBODlBRTMxOTE5OTc3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTdBN0Q1N0ZEM0VDMTFFNjkzOEE4OUFFMzE5MTk5NzciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTdBN0Q1ODBEM0VDMTFFNjkzOEE4OUFFMzE5MTk5NzciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6QqH+QAAAAgUlEQVR42mL4//8/AwhL5Kz6D2OjYyYGIPDMnPP/5Z+PDEyZK/4zYAGMIJUgwARUCBHiYfg3PYIRWRETjPFvegpU4gsDU+7q/1gVoSgEWY2kkAndflSF6/5jVYQC/vzFbhKqB0IZMRTBFbDwo/iQCauCyaGYQWCJRwEYEBMtAAEGAPX6Za4EW4CHAAAAAElFTkSuQmCC);
+                                    background-position: 0 3px;
+                                    padding-left: 20px;
+                                    font-size: 0.9em;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                    .error-type {
+                        font-size: 0.8em;
+                        padding-top: 1em;
+                        color: #767676;
+                    }
+                }
+                .footer {
+                    height: 3.75em;
+                }
             }
-            
-            
-            // border-left: 2px solid;
-            // border-bottom: 2px solid;
-            // border-right: 2px solid;
-            // border-radius: 1em;
-            // border-color:#bdc3c7;
-            
         }
     }
 }

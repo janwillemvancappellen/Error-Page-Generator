@@ -1,41 +1,25 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Page } from './page';
+import { TYPES } from './types';
+import { LANGUAGES } from './languages';
+import { COLORS } from './colors';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TemplateService {
-  private typeValue = new BehaviorSubject<string>('');
-  private languageValue = new BehaviorSubject<string>('');
-  private colorValue = new BehaviorSubject<string>('');
-  private nameValue = new BehaviorSubject('');
-  private notFoundValue = new BehaviorSubject('');
-  currentType = this.typeValue.asObservable();
-  currentLanguage = this.languageValue.asObservable();
-  currentColor = this.colorValue.asObservable();
-  currentName = this.nameValue.asObservable();
-  currentNotFound = this.notFoundValue.asObservable();
+  types = TYPES;
+  languages = LANGUAGES;
+  colors = COLORS;
 
-  changeTypeValue(type: string) {
-    this.typeValue.next(type);
+  pageObject = new Page('Site name', this.types[0], this.languages[0], this.colors[0]);
+  page = new BehaviorSubject<Page>(this.pageObject);
+
+  cast = this.page.asObservable();
+
+  updatePage(page: Page) {
+    console.dir(this.page);
+    this.page.next(page);
   }
-
-  changeLanguageValue(type: string) {
-    this.languageValue.next(type);
-    if (type === 'nl') {
-      this.notFoundValue.next('Niet gevonden');
-    } else {
-      this.notFoundValue.next('Not found');
-    }
-  }
-
-  changeColorValue(type: string) {
-    this.colorValue.next(type);
-  }
-
-  changeNameValue(name: string) {
-    this.nameValue.next(name);
-  }
-
-
 }

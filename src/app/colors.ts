@@ -17,7 +17,7 @@ export const COLORS: Color[] = [
         id: 3,
         name: 'lichtblauw',
         color: '#8fcae7',
-        textColor: '#ffffff'
+        textColor: '#000000'
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ export const COLORS: Color[] = [
         id: 7,
         name: 'mintgroen',
         color: '#76d2b6',
-        textColor: '#ffffff'
+        textColor: '#000000'
     },
     {
         id: 8,
@@ -59,13 +59,13 @@ export const COLORS: Color[] = [
         id: 10,
         name: 'donkergeel',
         color: '#ffb612',
-        textColor: '#ffffff'
+        textColor: '#000000'
     },
     {
         id: 11,
         name: 'geel',
         color: '#f9e11e',
-        textColor: '#ffffff'
+        textColor: '#000000'
     },
     {
         id: 12,
@@ -89,7 +89,7 @@ export const COLORS: Color[] = [
         id: 14,
         name: 'roze',
         color: '#f092cd',
-        textColor: '#ffffff'
+        textColor: '#000000'
     },
     {
         id: 15,

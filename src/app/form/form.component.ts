@@ -16,6 +16,7 @@ import { TemplateService } from '../template.service';
 export class FormComponent implements OnInit {
   @Output() formValue = new EventEmitter<string>();
 
+  page: Page;
   name: string;
   types = TYPES;
   colors = COLORS;
@@ -24,45 +25,35 @@ export class FormComponent implements OnInit {
   selectedLanguage: Language;
   selectedColor: Color;
   option: HTMLCollectionOf<Element>;
-  generateButtonText = 'Generate';
+  generateButtonText = 'Create';
 
   constructor(private data: TemplateService) {}
 
   ngOnInit() {
-    this.selectedType = this.types[0];
-    this.selectedLanguage = this.languages[0];
-    this.selectedColor = this.colors[0];
-    this.data.changeTypeValue(this.selectedType.name);
-    this.data.changeLanguageValue(this.selectedLanguage.name);
-    this.data.changeColorValue(this.selectedColor.color);
-    this.data.changeNameValue(this.name);
+    this.page = this.data.pageObject;
   }
 
-  onSelect(event, type) {
+  onSelect(event, value) {
     if (event.target.className === 'page-type') {
-      this.selectedType = type;
-      this.data.changeTypeValue(this.selectedType.name);
-      console.log(this.selectedType);
+      this.page.type = value;
+      this.data.updatePage(this.page);
     }
     if (event.target.className === 'page-language') {
-      this.selectedLanguage = type;
-      this.data.changeLanguageValue(this.selectedLanguage.name);
-      console.log(this.selectedLanguage);
+      this.page.language = value;
+      this.data.updatePage(this.page);
     }
     if (event.target.className === 'page-color') {
-      this.selectedColor = type;
-      this.data.changeColorValue(this.selectedColor.color);
-      console.log(this.selectedColor);
+      this.page.color = value;
+      this.data.updatePage(this.page);
     }
   }
 
-  onChange() {
-    this.data.changeNameValue(this.name);
+  onChange(name) {
+    this.page.name = name;
+    this.data.updatePage(this.page);
   }
 
   generatePage() {
-    const page = new Page(this.name, this.selectedType, this.selectedLanguage, this.selectedColor);
-    console.log(page);
-    return page;
+    console.log(this.data.page);
   }
 }

@@ -1,4 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "RO Sans";
+    font-style: normal;
+    font-weight: normal;
+    src: url("assets/fonts/RO-SansWebText-Regular.woff") format("opentype"),  // For modern browsers
+         url("assets/fonts/RO-SansWebText-Regular.ttf") format("truetype");   // Fallback for Android and iOs
+}
+@font-face {
+    font-family: "RO Sans";
+    font-style: italic;
+    font-weight: normal;
+    src: url("assets/fonts/RO-SansWebText-Italic.woff") format("opentype"),
+         url("assets/fonts/RO-SansWebText-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RO Sans";
+    font-style: normal;
+    font-weight: bold;
+    src: url("assets/fonts/RO-SansWebText-Bold.woff") format("opentype"),
+         url("assets/fonts/RO-SansWebText-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RO Serif";
+    font-style: normal;
+    font-weight: normal;
+    src: url("assets/fonts/RO-SerifWeb-Regular.woff") format("opentype"),
+         url("assets/fonts/RO-SerifWeb-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RO Serif";
+    font-style: italic;
+    font-weight: normal;
+    src: url("assets/fonts/RO-SerifWeb-Italic.woff") format("opentype"),
+        url("assets/fonts/RO-SerifWeb-Italic.ttf") format("truetype");
+}
+
 body {
     margin: 0;
 }

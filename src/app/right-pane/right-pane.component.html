@@ -3,7 +3,7 @@
         <div class="browser">
             <div class="top">
                 <div class="tab">
-                        {{ notFound }} | {{nameValue}}
+                        {{ page.language.content.notFound }} | {{ page.name }}
                 </div>
                 <div class="button"></div>
                 <div class="button"></div>
@@ -11,17 +11,26 @@
             </div>
             <div class="page">
                 <div class="head">
-                    <div class="logo"></div>
-                    <div class="nav">
-                        {{ nameValue }}
+                    <div class="logo"><img src="assets/logo/ro-logo.svg" width="" height=""></div>
+                    <div class="nav" [style.background-color]="this.page.color.color">
+                        <div [style.color]="this.page.color.textColor">{{ page.name }}</div>
                     </div>
                 </div>
                 <div class="content">
-                    <div class="page-title">{{ notFound }}</div>
+                    <div class="page-title">{{ page.language.content.notFound }}</div>
+                    <hr class="line" [style.color]="this.page.color.color">
+                    <div class="text">
+                        <strong>{{ page.language.content.text.title }}</strong>
+                        <p>{{ page.language.content.text.paragraph }}</p>
+                        <ul>
+                            <li><a href="#">{{ page.language.content.links.homepage }}</a></li>
+                            <li><a href="#">{{ page.language.content.links.search }}</a></li>
+                            <li><a href="#">{{ page.language.content.links.sitemap }}</a></li>
+                        </ul>
+                    </div>
+                    <div class="error-type">{{ page.language.content.error }}: {{ page.type.name }}</div>
                 </div>
-                <div class="footer">
-                    
-                </div>
+                <div class="footer" [style.background-color]="this.page.color.color"></div>
             </div>
         </div>
     </div>
