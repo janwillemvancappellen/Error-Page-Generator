@@ -65,21 +65,35 @@ export class FormComponent implements OnInit {
     const logoImage = new Image();
     const reader = new FileReader();
 
-    // hier verder
-    // if (file.type.match('image/svg')) {
-    //   reader.onload = setImage() {
-    //     reader.readAsDataURL(file);
-    //     console.log(reader.result);
-    //     console.log(logoImage);
-    //     console.log(logoImage.width);
-    //     logoImage.src = reader.result as string;
-    //     console.log(logoImage.width);
-    //     logoImage.crossOrigin = 'Anonymous';
-    //     this.page.logo.file = logoImage.src;
-    //     this.page.logo.width = logoImage.width;
-    //     this.page.logo.height = logoImage.height;
-    //   }
-    // }
+    reader.readAsDataURL(file);
+    logoImage.onload = () => {
+
+    }
+    
+    console.log(file.size);
+    if (file.type.match('image/svg')) {
+      reader.onload = () => {
+        logoImage.src = reader.result as string;
+        logoImage.crossOrigin = 'Anonymous';
+        console.log(logoImage.height);
+        this.page.logo.file = logoImage.src;
+        this.page.logo.width = logoImage.width;
+        this.page.logo.height = logoImage.height;
+        console.log(logoImage.height);
+      };
+      // const setImage = () => {
+      //   console.log('banana3');
+      //   console.log(file);
+      //   console.log(reader);
+      //   logoImage.src = reader.result as string;
+      //   console.log(logoImage.width);
+      //   logoImage.crossOrigin = 'Anonymous';
+      //   this.page.logo.file = logoImage.src;
+      //   this.page.logo.width = logoImage.width;
+      //   this.page.logo.height = logoImage.height;
+      // };
+      // reader.onload = setImage();
+    }
   }
 
   changeLogoWidth(size): void {
