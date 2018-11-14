@@ -1,9 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { TemplateService } from '../template.service';
 import { Page } from '../page';
-import { Type } from '../type';
-import { Language } from '../language';
-import { Color } from '../color';
 
 @Component({
   selector: 'app-right-pane',

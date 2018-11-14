@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LeftPaneComponent } from './left-pane/left-pane.component';
 import { RightPaneComponent } from './right-pane/right-pane.component';
 import { FormComponent } from './form/form.component';
+import { SafeUrlPipe } from './safe-url-pipe';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FormComponent } from './form/form.component';
     AppComponent,
     LeftPaneComponent,
     RightPaneComponent,
-    FormComponent
+    FormComponent,
+    SafeUrlPipe
   ],
   imports: [
     BrowserModule,

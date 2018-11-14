@@ -30,7 +30,7 @@ export const LANGUAGES: Language[] = [
             },
             links: {
                 homepage: 'Homepage Government.nl',
-                search: 'Search',
+                search: 'Search page',
                 sitemap: 'Sitemap'
             }
         }

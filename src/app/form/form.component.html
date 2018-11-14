@@ -1,25 +1,36 @@
 <div class="settings-form">
   <div class="setting">
-    <label>Error type:</label>
+    <label>Fout type:</label>
     <select>
       <option *ngFor="let type of types" (click)="onSelect($event, type)" class="page-type">{{ type.name }}</option>
     </select>
   </div>
   <div class="setting">
-    <label>Language:</label>
+    <label>Taal:</label>
     <select>
       <option *ngFor="let language of languages" (click)="onSelect($event, language)" class="page-language">{{ language.name | uppercase }}</option>
     </select>
   </div>
   <div class="setting">
-    <label>Color:</label>
+    <label>Kleur:</label>
     <select>
       <option *ngFor="let color of colors" class="page-color" (click)="onSelect($event, color)">{{ color.name }}</option>
     </select>
   </div>
   <div class="setting">
-    <label>Name:</label>
-    <input type="text" [(ngModel)]="name" (ngModelChange)="onChange(name)" placeholder="Enter page name" value="{{name}}"/>
+    <label>Naam:</label>
+    <input type="text" [(ngModel)]="name" (ngModelChange)="onChange(name)" value="{{ name }}" />
   </div>
-  <button type="button" (click)="generatePage()">{{ generateButtonText | uppercase }}</button>
+  <div class="setting">
+    <label>Logo:</label>
+    <input type="file" id="logo" accept="image/svg" [(ngModel)]="file" (ngModelChange)="getLogoFile()">
+  </div>
+  <div class="setting">
+    <label>Logo size:</label>
+    <input type="text" id="logo-width" [(ngModel)]="this.page.logo.width" [value]="this.page.logo.width" (ngModelChange)="changeLogoWidth(this.page.logo.width)">
+    <input type="text" id="logo-height" [(ngModel)]="this.page.logo.height" [value]="this.page.logo.height" (ngModelChange)="changeLogoHeight(this.page.logo.height)">
+  </div>
+
+  <button type="button" [disabled]="!name" (click)="generatePage()">{{ generateButtonText | uppercase }}</button>
+  {{ page.logo.file }}
 </div>

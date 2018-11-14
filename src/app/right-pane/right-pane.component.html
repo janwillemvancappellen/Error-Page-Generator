@@ -11,7 +11,9 @@
             </div>
             <div class="page">
                 <div class="head">
-                    <div class="logo"><img src="assets/logo/ro-logo.svg" width="" height=""></div>
+                    <div class="logo">
+                        <img [src]="this.page.logo.file | SafeUrl" [width]="this.page.logo.width" [height]="this.page.logo.height">
+                    </div>
                     <div class="nav" [style.background-color]="this.page.color.hex">
                         <div [style.color]="this.page.color.textColor">{{ page.name }}</div>
                     </div>

@@ -1,13 +1,12 @@
 .settings-form {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #1dd1a1;
     padding: 1em 0;
     .setting {
         display: flex;
         line-height: 2em;
         label {
-            flex: 0 0 50%;
+            flex: 0 0 30%;
         }
         select, input {
             flex: 1 100%;
@@ -16,7 +15,7 @@
     }
     button {
         margin: 1em 0;
-        background-color: #127F62;
+        background-color: #b2bec3;
         border: none;
         padding: 15px;
         color: white;
@@ -24,7 +23,7 @@
         border-radius: 0.2em;
         transition: background-color 200ms ease;
         &:hover {
-            background-color: #094031;
+            background-color: #8699a1;
         }
     }
 }

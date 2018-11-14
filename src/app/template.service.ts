@@ -12,10 +12,10 @@ export class TemplateService {
   types = TYPES;
   languages = LANGUAGES;
   colors = COLORS;
+  logo = {};
 
-  pageObject = new Page('Site name', this.types[0], this.languages[0], this.colors[0]);
+  pageObject = new Page('', this.types[0], this.languages[0], this.colors[0], this.logo);
   page = new BehaviorSubject<Page>(this.pageObject);
-
   cast = this.page.asObservable();
 
   updatePage(page: Page) {
