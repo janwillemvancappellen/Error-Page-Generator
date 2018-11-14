@@ -12,13 +12,13 @@
             <div class="page">
                 <div class="head">
                     <div class="logo"><img src="assets/logo/ro-logo.svg" width="" height=""></div>
-                    <div class="nav" [style.background-color]="this.page.color.color">
+                    <div class="nav" [style.background-color]="this.page.color.hex">
                         <div [style.color]="this.page.color.textColor">{{ page.name }}</div>
                     </div>
                 </div>
                 <div class="content">
                     <div class="page-title">{{ page.language.content.notFound }}</div>
-                    <hr class="line" [style.color]="this.page.color.color">
+                    <hr class="line" [style.color]="this.page.color.hex">
                     <div class="text">
                         <strong>{{ page.language.content.text.title }}</strong>
                         <p>{{ page.language.content.text.paragraph }}</p>
@@ -30,7 +30,7 @@
                     </div>
                     <div class="error-type">{{ page.language.content.error }}: {{ page.type.name }}</div>
                 </div>
-                <div class="footer" [style.background-color]="this.page.color.color"></div>
+                <div class="footer" [style.background-color]="this.page.color.hex"></div>
             </div>
         </div>
     </div>

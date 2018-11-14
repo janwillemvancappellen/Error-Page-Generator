@@ -1,6 +1,6 @@
 export class Color {
     id: number;
     name: string;
-    color: string;
+    hex: string;
     textColor: string;
 }
